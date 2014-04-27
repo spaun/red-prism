@@ -6,3 +6,6 @@
    :headers {"Content-Type" "text/html"}
    :body "<p>Big Brother is watching you</p>"})
 
+(defn -main [port]
+  (run-jetty handler {:port (Integer. port) :join? false}))
+
